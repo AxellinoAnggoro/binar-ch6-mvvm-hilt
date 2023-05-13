@@ -7,12 +7,11 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.axellinoanggoro.binar_ch6_news_api.R
 import com.axellinoanggoro.binar_ch6_news_api.databinding.ActivityCategoryBinding
 import com.axellinoanggoro.binar_ch6_news_api.model.CategoryData
-import dagger.hilt.android.AndroidEntryPoint
 
 class CategoryActivity : AppCompatActivity() {
 
-    lateinit var binding: ActivityCategoryBinding
-    lateinit var categoryAdapter: CategoryAdapter
+    private lateinit var binding: ActivityCategoryBinding
+    private lateinit var categoryAdapter: CategoryAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -43,9 +42,8 @@ class CategoryActivity : AppCompatActivity() {
             layoutManager = LinearLayoutManager(this@CategoryActivity, LinearLayoutManager.VERTICAL, false)
             adapter = categoryAdapter
             categoryAdapter.onClick = {
-                var categ = it.name
                 val inten = Intent(context, SourceActivity::class.java)
-                inten.putExtra("name", categ)
+                inten.putExtra("name", it.name)
                 startActivity(inten)
             }
         }

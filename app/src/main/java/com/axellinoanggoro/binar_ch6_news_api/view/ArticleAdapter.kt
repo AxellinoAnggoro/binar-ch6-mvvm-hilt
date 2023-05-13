@@ -1,25 +1,20 @@
 package com.axellinoanggoro.binar_ch6_news_api.view
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.axellinoanggoro.binar_ch6_news_api.databinding.ItemArticleBinding
 import com.axellinoanggoro.binar_ch6_news_api.model.Article
-import com.axellinoanggoro.binar_ch6_news_api.model.Source
 import com.bumptech.glide.Glide
-import dagger.hilt.android.AndroidEntryPoint
 
-class ArticleAdapter(var listArticle : List<Article>):RecyclerView.Adapter<ArticleAdapter.ViewHolder>() {
+class ArticleAdapter(private var listArticle : List<Article>):RecyclerView.Adapter<ArticleAdapter.ViewHolder>() {
 
     var onClick : ((Article) -> Unit)? = null
 
-    class ViewHolder(var binding: ItemArticleBinding) : RecyclerView.ViewHolder(binding.root) {
-
-    }
+    class ViewHolder(var binding: ItemArticleBinding) : RecyclerView.ViewHolder(binding.root)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        var view = ItemArticleBinding.inflate(LayoutInflater.from(parent.context),parent, false)
+        val view = ItemArticleBinding.inflate(LayoutInflater.from(parent.context),parent, false)
         return ViewHolder(view)
     }
 
@@ -41,6 +36,7 @@ class ArticleAdapter(var listArticle : List<Article>):RecyclerView.Adapter<Artic
 
     fun setArticle(listArticle: List<Article>){
         this.listArticle = listArticle
+        notifyDataSetChanged()
     }
 
 }
