@@ -22,7 +22,7 @@ class SourceActivity : AppCompatActivity() {
         binding = ActivitySourceBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val dataCategory = intent.extras?.getString("name", "") ?: ""
+        val dataCategory = intent.extras?.getString("name", "").toString()
         val layout = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
 
         sourceAdapter = SourceAdapter(ArrayList())
