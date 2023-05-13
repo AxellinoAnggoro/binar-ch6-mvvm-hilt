@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="20dp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/articleCv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/articleImg"
+                android:layout_width="wrap_content"
+                android:layout_height="150dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_launcher_background"/>
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:id="@+id/articleTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Article Title"
+                style="@style/TextAppearance.MaterialComponents.Headline6"
+                android:layout_toEndOf="@+id/articleImg"/>
+
+            <TextView
+                android:id="@+id/articleDate"
+                android:layout_marginStart="10dp"
+                style="@style/TextAppearance.MaterialComponents.Caption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12/05/2023"
+                android:layout_below="@+id/articleTitle"
+                android:layout_toEndOf="@+id/articleImg"/>
+
+            <TextView
+                android:id="@+id/articleDesc"
+                style="@style/TextAppearance.MaterialComponents.Body1"
+                android:layout_margin="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/articleDate"
+                android:layout_toEndOf="@+id/articleImg"
+                android:text="A strict Covid-era migrant policy expires at midnight, and officials expect chaos at the border."/>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
