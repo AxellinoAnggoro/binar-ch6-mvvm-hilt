@@ -1,4 +1,4 @@
-package com.axellinoanggoro.binar_ch6_news_api.view
+package com.axellinoanggoro.binar_ch6_news_api.view.activity
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.axellinoanggoro.binar_ch6_news_api.R
 import com.axellinoanggoro.binar_ch6_news_api.databinding.ActivityCategoryBinding
 import com.axellinoanggoro.binar_ch6_news_api.model.CategoryData
+import com.axellinoanggoro.binar_ch6_news_api.view.adapter.CategoryAdapter
 
 class CategoryActivity : AppCompatActivity() {
 
@@ -19,21 +20,13 @@ class CategoryActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         val listCategory = arrayListOf(
-
             CategoryData("BUSINESS", R.drawable.ic_launcher_background),
-
             CategoryData("ENTERTAINMENT", R.drawable.ic_launcher_background),
-
             CategoryData("GENERAL", R.drawable.ic_launcher_background),
-
             CategoryData("HEALTH", R.drawable.ic_launcher_background),
-
             CategoryData("SCIENCE", R.drawable.ic_launcher_background),
-
             CategoryData("SPORTS", R.drawable.ic_launcher_background),
-
             CategoryData("TECHNOLOGY", R.drawable.ic_launcher_background)
-
         )
 
         categoryAdapter = CategoryAdapter(listCategory)

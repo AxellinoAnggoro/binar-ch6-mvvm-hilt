@@ -1,4 +1,4 @@
-package com.axellinoanggoro.binar_ch6_news_api.view
+package com.axellinoanggoro.binar_ch6_news_api.view.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

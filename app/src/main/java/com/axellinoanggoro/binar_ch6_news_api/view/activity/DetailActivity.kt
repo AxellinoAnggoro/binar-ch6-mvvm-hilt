@@ -1,4 +1,4 @@
-package com.axellinoanggoro.binar_ch6_news_api.view
+package com.axellinoanggoro.binar_ch6_news_api.view.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

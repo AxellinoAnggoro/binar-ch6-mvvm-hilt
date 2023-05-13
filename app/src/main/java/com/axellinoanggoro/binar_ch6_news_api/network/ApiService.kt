@@ -1,6 +1,7 @@
 package com.axellinoanggoro.binar_ch6_news_api.network
 
 import com.axellinoanggoro.binar_ch6_news_api.model.Article
+import com.axellinoanggoro.binar_ch6_news_api.model.ResponseDataArticle
 import com.axellinoanggoro.binar_ch6_news_api.model.ResponseDataSource
 import com.axellinoanggoro.binar_ch6_news_api.model.Source
 import retrofit2.Call
@@ -18,5 +19,5 @@ interface ApiService {
     fun getAllArticles(
         @Query("sources") sources : String,
         @Query("apiKey") apiKey : String = "30c88f2ab641452ab393bef502f9fcc0"
-    ): Call<List<Article>>
+    ): Call<ResponseDataArticle>
 }
